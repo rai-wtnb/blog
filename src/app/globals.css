@@ -2,7 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --theme-primary: #3e4747;
+  --theme-accent-pink: #c8a6a0;
+  --theme-accent-beige: #d9cfc1;
+  --theme-accent-gold: #bfae70;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #ededed;
+  --theme-primary: #4a5555;
+  --theme-accent-pink: #d4b2ac;
+  --theme-accent-beige: #e5dbcd;
+  --theme-accent-gold: #cbba7c;
 }
 
 @theme inline {
@@ -12,15 +25,54 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent-gold);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--theme-accent-gold);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--theme-accent-pink);
+  color: var(--foreground);
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
