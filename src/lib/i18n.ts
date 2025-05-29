@@ -19,7 +19,6 @@ export const translations = {
     },
     blog: {
       backToBlog: 'Back to Blog',
-      readingTime: 'min read',
       publishedOn: 'Published on',
       tags: 'Tags',
       relatedPosts: 'Related Posts',
@@ -50,7 +49,6 @@ export const translations = {
     },
     blog: {
       backToBlog: 'ブログに戻る',
-      readingTime: '分で読める',
       publishedOn: '公開日',
       tags: 'タグ',
       relatedPosts: '関連記事',

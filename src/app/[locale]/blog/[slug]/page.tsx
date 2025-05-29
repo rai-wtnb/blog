@@ -47,18 +47,14 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Article header */}
       <article>
         <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: "var(--foreground)" }}>
             {post.title}
           </h1>
           
-          <div className="flex flex-wrap items-center gap-6 text-gray-600 dark:text-gray-400 mb-6">
+          <div className="flex flex-wrap items-center gap-6 mb-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2" style={{ color: "var(--foreground)" }} />
               <span>{t.blog.publishedOn} {formatDate(post.publishedAt, locale)}</span>
-            </div>
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              <span>{Math.max(1, Math.round(post.readingTime))} {t.blog.readingTime}</span>
             </div>
           </div>
 
@@ -69,7 +65,8 @@ export default async function BlogPostPage({ params }: Props) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-sm bg-theme-accent-beige dark:bg-gray-700 text-theme-primary dark:text-gray-300 rounded-full"
+                  className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 rounded-full"
+                  style={{ background: "var(--foreground)", color: "var(--foreground-white)" }}
                 >
                   {tag}
                 </span>
@@ -78,26 +75,8 @@ export default async function BlogPostPage({ params }: Props) {
           )}
         </header>
 
-        {/* Article content */}
-        <div className="prose prose-lg max-w-none dark:prose-invert">
-          <MDXRenderer source={post.content} />
-        </div>
+        <MDXRenderer source={post.content} />
 
-        {/* Author info */}
-        <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <div className="flex items-center">
-            <div>
-              <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                {post.author.name}
-              </h3>
-              {post.author.bio && (
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                  {post.author.bio}
-                </p>
-              )}
-            </div>
-          </div>
-        </footer>
       </article>
     </div>
   );

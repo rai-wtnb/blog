@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Rai Watanabe",
   description: "A bilingual blog with dark mode support",
 };
 

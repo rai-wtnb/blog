@@ -59,7 +59,7 @@ const components = {
 
 export function MDXRenderer({ source }: Props) {
   return (
-    <div className="prose prose-lg max-w-none dark:prose-invert">
+    <div className="prose prose-lg max-w-none" style={{ color: "var(--foreground)" }}>
       <MDXRemote source={source} components={components} />
     </div>
   );

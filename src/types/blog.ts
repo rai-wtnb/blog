@@ -9,14 +9,8 @@ export interface BlogPost {
   updatedAt?: string;
   language: Locale;
   tags: string[];
-  readingTime: number;
   featured?: boolean;
   coverImage?: string;
-  author: {
-    name: string;
-    image?: string;
-    bio?: string;
-  };
 }
 
 export interface BlogPostMeta {
@@ -27,7 +21,6 @@ export interface BlogPostMeta {
   updatedAt?: string;
   language: Locale;
   tags: string[];
-  readingTime: number;
   featured?: boolean;
   coverImage?: string;
   author: {

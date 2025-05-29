@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <Navigation locale={locale} />
       <main>{children}</main>
     </div>

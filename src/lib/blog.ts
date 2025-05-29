@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import readingTime from 'reading-time';
 import { BlogPost, BlogPostMeta } from '@/types/blog';
 import { Locale } from '@/lib/i18n';
 
@@ -34,7 +33,6 @@ export function getPostBySlug(slug: string, locale: Locale): BlogPost | null {
     
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    const readingTimeStats = readingTime(content);
     
     return {
       slug,
@@ -45,14 +43,8 @@ export function getPostBySlug(slug: string, locale: Locale): BlogPost | null {
       updatedAt: data.updatedAt,
       language: locale,
       tags: data.tags || [],
-      readingTime: readingTimeStats.minutes,
       featured: data.featured || false,
       coverImage: data.coverImage,
-      author: {
-        name: data.author?.name || 'Anonymous',
-        image: data.author?.image,
-        bio: data.author?.bio,
-      },
     };
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error);

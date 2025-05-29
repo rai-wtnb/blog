@@ -17,11 +17,11 @@ const authorData = {
   },
   image: '/author-avatar.jpg', // Add your avatar image to public folder
   social: {
-    linkedin: 'https://linkedin.com/in/yourprofile',
-    twitter: 'https://twitter.com/yourhandle',
-    instagram: 'https://instagram.com/yourhandle',
-    github: 'https://github.com/yourusername',
-    email: 'your.email@example.com',
+    linkedin: 'https://linkedin.com/in/rai-wtnb',
+    twitter: 'https://twitter.com/rai_wtnb',
+    // instagram: 'https://instagram.com/rai_wtnb',
+    github: 'https://github.com/rai-wtnb',
+    email: 'rai.watanabe910@gmail.com',
   },
 };
 
@@ -35,10 +35,10 @@ export default async function HomePage({ params }: Props) {
       {/* Hero Section */}
       <section className="text-center mb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--foreground)" }}>
             {t.home.introduction}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-foreground mb-8 leading-relaxed">
             {authorData.bio[locale]}
           </p>
           <SocialLinks social={authorData.social} locale={locale} />
@@ -48,7 +48,7 @@ export default async function HomePage({ params }: Props) {
       {/* Recent Posts Section */}
       <section className="mb-16">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-foreground">
             {t.home.recentPosts}
           </h2>
           <Link
@@ -59,22 +59,11 @@ export default async function HomePage({ params }: Props) {
           </Link>
         </div>
 
-        {recentPosts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {recentPosts.map((post) => (
-              <BlogPostCard key={post.slug} post={post} locale={locale} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-300 text-lg">
-              {locale === 'en' 
-                ? 'No blog posts yet. Check back soon!' 
-                : 'まだブログ投稿がありません。また後でチェックしてください！'
-              }
-            </p>
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {recentPosts.map((post) => (
+            <BlogPostCard key={post.slug} post={post} locale={locale} />
+          ))}
+        </div>
       </section>
     </div>
   );

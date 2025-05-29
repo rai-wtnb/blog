@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --theme-primary: #3e4747;
-  --theme-accent-pink: #c8a6a0;
-  --theme-accent-beige: #d9cfc1;
-  --theme-accent-gold: #bfae70;
+  --background: #ededed;
+  --foreground: #1c1c1c;
+  --foreground-white: #ededed;
+  --theme-primary: #1c1c1c;
+  --theme-accent: #a9665f;
 }
 
 .dark {
-  --background: #1a1a1a;
+  --background: #1c1c1c;
   --foreground: #ededed;
-  --theme-primary: #4a5555;
-  --theme-accent-pink: #d4b2ac;
-  --theme-accent-beige: #e5dbcd;
-  --theme-accent-gold: #cbba7c;
+  --foreground-white: #ededed;
+  --theme-primary: #1c1c1c;
+  --theme-accent: #a9665f;
 }
 
 @theme inline {
@@ -58,8 +56,8 @@ body {
 
 /* Selection styles */
 ::selection {
-  background-color: var(--theme-accent-pink);
-  color: var(--foreground);
+  background-color: var(--theme-accent);
+  color: var(--foreground-white);
 }
 
 /* Line clamp utilities */

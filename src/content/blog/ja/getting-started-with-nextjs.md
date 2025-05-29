@@ -4,9 +4,6 @@ excerpt: "Next.jsの基本を学び、なぜそれがモダンなWebアプリケ
 publishedAt: "2024-01-20"
 tags: ["nextjs", "react", "ウェブ開発", "javascript"]
 featured: false
-author:
-  name: "Your Name"
-  bio: "情熱的な開発者兼ライター"
 ---
 
 # Next.js入門：モダンなReactフレームワーク

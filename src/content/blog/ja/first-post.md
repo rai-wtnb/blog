@@ -4,9 +4,6 @@ excerpt: "これは私の最初のブログ投稿です。自己紹介と、こ�
 publishedAt: "2024-01-15"
 tags: ["紹介", "ようこそ", "ブログ"]
 featured: true
-author:
-  name: "Your Name"
-  bio: "情熱的な開発者兼ライター"
 ---
 
 # ブログへようこそ
