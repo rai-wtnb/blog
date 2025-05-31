@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -26,15 +26,15 @@ export function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="p-2 rounded-lg transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {theme === "dark" ? (
         <Sun className="w-5 h-5" style={{ color: "var(--foreground)" }} />
       ) : (
         <Moon className="w-5 h-5" style={{ color: "var(--foreground)" }} />
       )}
     </button>
   );
-} 
+}

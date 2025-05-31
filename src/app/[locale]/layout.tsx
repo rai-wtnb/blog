@@ -1,6 +1,6 @@
-import { Locale, locales } from '@/lib/i18n';
-import { Navigation } from '@/components/layout/Navigation';
-import { notFound } from 'next/navigation';
+import { Locale, locales } from "@/lib/i18n";
+import { Navigation } from "@/components/layout/Navigation";
+import { notFound } from "next/navigation";
 
 interface Props {
   children: React.ReactNode;
@@ -11,12 +11,9 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-  
+
   // Validate locale
   if (!locales.includes(locale)) {
     notFound();
@@ -28,4 +25,4 @@ export default async function LocaleLayout({
       <main>{children}</main>
     </div>
   );
-} 
+}

@@ -34,4 +34,4 @@ Thank you for visiting, and I hope you find the content here valuable and intere
 
 ---
 
-*This is just the beginning of an exciting journey. Stay tuned for more posts!* 
+_This is just the beginning of an exciting journey. Stay tuned for more posts!_
