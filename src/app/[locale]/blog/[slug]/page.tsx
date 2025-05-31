@@ -3,7 +3,7 @@ import { getPostBySlug, getAllSlugs, formatDate } from "@/lib/blog";
 import { MDXRenderer } from "@/components/ui/MDXRenderer";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Clock, Calendar, Tag, ArrowLeft } from "lucide-react";
+import { Calendar, Tag, ArrowLeft } from "lucide-react";
 
 interface Props {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -35,7 +35,6 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Back to blog link */}
       <Link
         href={`/${locale}/blog`}
         className="inline-flex items-center text-theme-accent-gold hover:text-theme-primary transition-colors mb-8"
@@ -44,7 +43,6 @@ export default async function BlogPostPage({ params }: Props) {
         {t.blog.backToBlog}
       </Link>
 
-      {/* Article header */}
       <article>
         <header className="mb-8">
           <h1
@@ -68,16 +66,14 @@ export default async function BlogPostPage({ params }: Props) {
 
           {post.tags.length > 0 && (
             <div className="flex items-center flex-wrap gap-2 mb-8">
-              <Tag className="w-4 h-4 text-gray-400" />
-              <span className="text-sm text-gray-600 dark:text-gray-400 mr-2">
-                {t.blog.tags}:
-              </span>
+              <Tag className="w-4 h-4" />
+              <span className="text-sm mr-2">{t.blog.tags}:</span>
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 rounded-full"
+                  className="px-3 py-1 text-s rounded-full"
                   style={{
-                    background: "var(--foreground)",
+                    background: "var(--theme-accent)",
                     color: "var(--foreground-white)",
                   }}
                 >
