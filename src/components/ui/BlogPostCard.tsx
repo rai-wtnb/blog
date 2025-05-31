@@ -14,7 +14,7 @@ export function BlogPostCard({ post, locale }: Props) {
 
   return (
     <article
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
       style={{ background: "var(--background)" }}
     >
       {post.coverImage && (
@@ -29,7 +29,7 @@ export function BlogPostCard({ post, locale }: Props) {
       )}
 
       <div className="p-6">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-foreground mb-2 line-clamp-2">
+        <h2 className="text-xl font-semibold mb-2 line-clamp-2">
           <Link
             href={`/${locale}/blog/${post.slug}`}
             className="hover:text-theme-accent-gold transition-colors"
@@ -38,31 +38,32 @@ export function BlogPostCard({ post, locale }: Props) {
           </Link>
         </h2>
 
-        <p className="text-gray-600 dark:text-foreground mb-4 line-clamp-3">
-          {post.excerpt}
-        </p>
+        <p className="mb-4 line-clamp-3">{post.excerpt}</p>
 
         {post.tags.length > 0 && (
           <div className="flex items-center flex-wrap gap-2">
             <Tag className="w-4 h-4" />
-            {post.tags.slice(0, 3).map((tag) => (
+            {post.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
                 className="px-2 py-1 text-xs rounded-full"
-                style={{ background: "var(--theme-accent)" }}
+                style={{
+                  background: "var(--theme-accent)",
+                  color: "var(--white)",
+                }}
               >
                 {tag}
               </span>
             ))}
-            {post.tags.length > 3 && (
+            {post.tags.length > 4 && (
               <span className="text-xs text-gray-500">
-                +{post.tags.length - 3}
+                +{post.tags.length - 4}
               </span>
             )}
           </div>
         )}
 
-        <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-4 pt-4 border-t border-gray-200">
           <Link
             href={`/${locale}/blog/${post.slug}`}
             className="inline-flex items-center text-theme-accent-gold hover:text-theme-primary transition-colors font-medium"

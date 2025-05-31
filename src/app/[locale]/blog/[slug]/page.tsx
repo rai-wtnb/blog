@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
                   className="px-3 py-1 text-s rounded-full"
                   style={{
                     background: "var(--theme-accent)",
-                    color: "var(--foreground-white)",
+                    color: "var(--white)",
                   }}
                 >
                   {tag}

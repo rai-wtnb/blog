@@ -80,15 +80,21 @@ const components = {
   ),
   code: (props: ComponentPropsWithoutRef<"code">) => (
     <code
-      className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono"
-      style={{ color: "var(--foreground)" }}
+      className="px-2 py-1 rounded text-sm font-mono"
+      style={{
+        color: "var(--white)",
+        background: "var(--theme-primary)",
+      }}
       {...props}
     />
   ),
   pre: (props: ComponentPropsWithoutRef<"pre">) => (
     <pre
-      className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto my-6"
-      style={{ color: "var(--foreground)" }}
+      className="p-4 rounded-lg overflow-x-auto my-6"
+      style={{
+        color: "var(--white)",
+        background: "var(--theme-primary)",
+      }}
       {...props}
     />
   ),

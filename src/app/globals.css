@@ -3,7 +3,7 @@
 :root {
   --background: #ededed;
   --foreground: #1c1c1c;
-  --foreground-white: #ededed;
+  --white: #ededed;
   --theme-primary: #1c1c1c;
   --theme-accent: #a9665f;
 }
@@ -11,7 +11,7 @@
 .dark {
   --background: #1c1c1c;
   --foreground: #ededed;
-  --foreground-white: #ededed;
+  --white: #ededed;
   --theme-primary: #1c1c1c;
   --theme-accent: #a9665f;
 }
@@ -58,7 +58,7 @@ body {
 /* Selection styles */
 ::selection {
   background-color: var(--theme-accent);
-  color: var(--foreground-white);
+  color: var(--white);
 }
 
 /* Line clamp utilities */

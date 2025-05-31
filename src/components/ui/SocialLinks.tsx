@@ -1,3 +1,5 @@
+"use client";
+
 import { SocialLinks as SocialLinksType } from "@/types/blog";
 import { Locale, getTranslations } from "@/lib/i18n";
 import { Linkedin, Twitter, Instagram, Github, Mail } from "lucide-react";
@@ -55,7 +57,14 @@ export function SocialLinks({ social, locale }: Props) {
               href={item.url!}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-gray-600 dark:text-gray-400 transition-colors ${item.color}`}
+              className="transition-colors"
+              style={{ color: "var(--foreground)", transition: "color 0.2s" }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "var(--theme-accent)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "var(--foreground)")
+              }
               aria-label={item.name}
             >
               <Icon className="w-6 h-6" />
