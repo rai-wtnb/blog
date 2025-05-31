@@ -1,8 +1,8 @@
-import { Locale, getTranslations } from '@/lib/i18n';
-import { getRecentPosts } from '@/lib/blog';
-import { BlogPostCard } from '@/components/ui/BlogPostCard';
-import { SocialLinks } from '@/components/ui/SocialLinks';
-import Link from 'next/link';
+import { Locale, getTranslations } from "@/lib/i18n";
+import { getRecentPosts } from "@/lib/blog";
+import { BlogPostCard } from "@/components/ui/BlogPostCard";
+import { SocialLinks } from "@/components/ui/SocialLinks";
+import Link from "next/link";
 
 interface Props {
   params: Promise<{ locale: Locale }>;
@@ -10,18 +10,18 @@ interface Props {
 
 // Mock author data - replace with your actual data
 const authorData = {
-  name: 'Your Name',
+  name: "Your Name",
   bio: {
-    en: 'Welcome to my blog! I write about technology, programming, and my thoughts on various topics.(This post was created by AI for mock purposes.)',
-    ja: 'ブログへようこそ！技術、プログラミング、様々なトピックについて考えを書いています。(This post was created by AI for mock purposes.)',
+    en: "Welcome to my blog! I write about technology, programming, and my thoughts on various topics.(This post was created by AI for mock purposes.)",
+    ja: "ブログへようこそ！技術、プログラミング、様々なトピックについて考えを書いています。(This post was created by AI for mock purposes.)",
   },
-  image: '/author-avatar.jpg', // Add your avatar image to public folder
+  image: "/author-avatar.jpg", // Add your avatar image to public folder
   social: {
-    linkedin: 'https://linkedin.com/in/rai-wtnb',
-    twitter: 'https://twitter.com/rai_wtnb',
+    linkedin: "https://linkedin.com/in/rai-wtnb",
+    twitter: "https://twitter.com/rai_wtnb",
     // instagram: 'https://instagram.com/rai_wtnb',
-    github: 'https://github.com/rai-wtnb',
-    email: 'rai.watanabe910@gmail.com',
+    github: "https://github.com/rai-wtnb",
+    email: "rai.watanabe910@gmail.com",
   },
 };
 
@@ -35,7 +35,10 @@ export default async function HomePage({ params }: Props) {
       {/* Hero Section */}
       <section className="text-center mb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "var(--foreground)" }}>
+          <h1
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: "var(--foreground)" }}
+          >
             {t.home.introduction}
           </h1>
           <p className="text-xl text-gray-600 dark:text-foreground mb-8 leading-relaxed">
@@ -67,4 +70,4 @@ export default async function HomePage({ params }: Props) {
       </section>
     </div>
   );
-} 
+}

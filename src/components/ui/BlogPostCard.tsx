@@ -1,9 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { BlogPostMeta } from '@/types/blog';
-import { Locale, getTranslations } from '@/lib/i18n';
-import { formatDate } from '@/lib/blog';
-import { Clock, Tag } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
+import { BlogPostMeta } from "@/types/blog";
+import { Locale, getTranslations } from "@/lib/i18n";
+import { Tag } from "lucide-react";
 
 interface Props {
   post: BlogPostMeta;
@@ -14,7 +13,10 @@ export function BlogPostCard({ post, locale }: Props) {
   const t = getTranslations(locale);
 
   return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" style={{ background: "var(--background)" }}>
+    <article
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      style={{ background: "var(--background)" }}
+    >
       {post.coverImage && (
         <div className="relative h-48 w-full">
           <Image
@@ -25,21 +27,21 @@ export function BlogPostCard({ post, locale }: Props) {
           />
         </div>
       )}
-      
+
       <div className="p-6">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-foreground mb-2 line-clamp-2">
-          <Link 
+          <Link
             href={`/${locale}/blog/${post.slug}`}
             className="hover:text-theme-accent-gold transition-colors"
           >
             {post.title}
           </Link>
         </h2>
-        
+
         <p className="text-gray-600 dark:text-foreground mb-4 line-clamp-3">
           {post.excerpt}
         </p>
-        
+
         {post.tags.length > 0 && (
           <div className="flex items-center flex-wrap gap-2">
             <Tag className="w-4 h-4" />
@@ -53,11 +55,13 @@ export function BlogPostCard({ post, locale }: Props) {
               </span>
             ))}
             {post.tags.length > 3 && (
-              <span className="text-xs text-gray-500">+{post.tags.length - 3}</span>
+              <span className="text-xs text-gray-500">
+                +{post.tags.length - 3}
+              </span>
             )}
           </div>
         )}
-        
+
         <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
           <Link
             href={`/${locale}/blog/${post.slug}`}
@@ -82,4 +86,4 @@ export function BlogPostCard({ post, locale }: Props) {
       </div>
     </article>
   );
-} 
+}

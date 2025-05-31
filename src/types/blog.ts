@@ -1,4 +1,4 @@
-import { Locale } from '@/lib/i18n';
+import { Locale } from "@/lib/i18n";
 
 export interface BlogPost {
   slug: string;
@@ -46,4 +46,4 @@ export interface Author {
   };
   image?: string;
   social: SocialLinks;
-} 
+}
