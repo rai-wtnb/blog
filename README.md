@@ -13,15 +13,6 @@ A modern, bilingual blog built with Next.js, TypeScript, and Tailwind CSS. Featu
 - 🔍 **SEO Optimized**: Automatic sitemap generation and SEO meta tags
 - 🎯 **TypeScript**: Full type safety throughout the application
 
-## Color Palette
-
-- **Theme Primary**: Dark gray-tinted teal (#3e4747)
-- **Text**: Black (#000000)
-- **Accent Colors**:
-  - Muted pink (#c8a6a0)
-  - Sand beige (#d9cfc1)
-  - Antique gold (#bfae70)
-
 ## Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
@@ -37,23 +28,26 @@ A modern, bilingual blog built with Next.js, TypeScript, and Tailwind CSS. Featu
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone <your-repo-url>
 cd blog
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start the development server
+
 ```bash
 npm run dev
 ```
@@ -88,10 +82,12 @@ src/
 ### Adding Blog Posts
 
 1. Create a new markdown file in the appropriate language directory:
+
    - English: `src/content/blog/en/your-post.md`
    - Japanese: `src/content/blog/ja/your-post.md`
 
 2. Add frontmatter to your markdown file:
+
 ```markdown
 ---
 title: "Your Post Title"
@@ -128,17 +124,17 @@ Edit the `authorData` object in `src/app/[locale]/page.tsx`:
 
 ```typescript
 const authorData = {
-  name: 'Your Name',
+  name: "Your Name",
   bio: {
-    en: 'Your English bio...',
-    ja: 'Your Japanese bio...',
+    en: "Your English bio...",
+    ja: "Your Japanese bio...",
   },
   social: {
-    linkedin: 'your-linkedin-url',
-    twitter: 'your-twitter-url',
-    instagram: 'your-instagram-url',
-    github: 'your-github-url',
-    email: 'your-email@example.com',
+    linkedin: "your-linkedin-url",
+    twitter: "your-twitter-url",
+    instagram: "your-instagram-url",
+    github: "your-github-url",
+    email: "your-email@example.com",
   },
 };
 ```
@@ -146,6 +142,7 @@ const authorData = {
 ### Changing Colors
 
 Update the color variables in:
+
 - `tailwind.config.ts` (Tailwind configuration)
 - `src/app/globals.css` (CSS variables)
 
@@ -155,7 +152,7 @@ Update `next-sitemap.config.js` with your domain:
 
 ```javascript
 module.exports = {
-  siteUrl: 'https://your-domain.com',
+  siteUrl: "https://your-domain.com",
   // ... other configuration
 };
 ```
@@ -171,11 +168,13 @@ module.exports = {
 ### Other Platforms
 
 1. Build the project:
+
 ```bash
 npm run build
 ```
 
 2. Start the production server:
+
 ```bash
 npm start
 ```
@@ -192,18 +191,9 @@ SITE_URL=https://your-domain.com
 ## Future Enhancements
 
 - Supabase integration for dynamic content management
-- Comment system
 - Newsletter subscription
 - Search functionality
-- Related posts suggestions
 - Analytics integration
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
 ## License
 
