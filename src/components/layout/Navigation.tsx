@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Locale, getTranslations } from "@/lib/i18n";
+import { Locale } from "@/lib/i18n";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
@@ -11,7 +11,6 @@ interface Props {
 }
 
 export function Navigation({ locale }: Props) {
-  const t = getTranslations(locale);
   const pathname = usePathname();
 
   // Check if current page is a blog post page
@@ -31,10 +30,10 @@ export function Navigation({ locale }: Props) {
             </Link>
             <div className="hidden md:flex space-x-6">
               <Link href={`/${locale}`} className="transition-colors">
-                {t.nav.home}
+                Home
               </Link>
               <Link href={`/${locale}/blog`} className="transition-colors">
-                {t.nav.blog}
+                Blog
               </Link>
             </div>
           </div>

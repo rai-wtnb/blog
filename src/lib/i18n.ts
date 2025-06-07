@@ -5,10 +5,6 @@ export type Locale = (typeof locales)[number];
 
 export const translations = {
   en: {
-    nav: {
-      home: "Home",
-      blog: "Blog",
-    },
     home: {
       recentPosts: "Recent Posts",
       readMore: "Read More",
@@ -32,10 +28,6 @@ export const translations = {
     },
   },
   ja: {
-    nav: {
-      home: "ホーム",
-      blog: "ブログ",
-    },
     home: {
       recentPosts: "最新の投稿",
       readMore: "続きを読む",

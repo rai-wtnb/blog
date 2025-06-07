@@ -9,6 +9,8 @@ author:
   bio: "A passionate developer and writer"
 ---
 
+(This post was created by AI for mock purposes.)
+
 Hello and welcome to my blog! I'm excited to share my thoughts, experiences, and knowledge with you through this platform.
 
 ## What You Can Expect

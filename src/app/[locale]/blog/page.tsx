@@ -18,7 +18,7 @@ export default async function BlogPage({ params }: Props) {
           className="text-4xl font-bold mb-4"
           style={{ color: "var(--foreground)" }}
         >
-          {t.nav.blog}
+          Blog
         </h1>
       </div>
       <div className="grid grid-cols-1 gap-8">
