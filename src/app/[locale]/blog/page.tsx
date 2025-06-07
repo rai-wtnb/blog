@@ -1,4 +1,4 @@
-import { Locale, getTranslations } from "@/lib/i18n";
+import { Locale } from "@/lib/i18n";
 import { getAllPosts } from "@/lib/blog";
 import { BlogPostCard } from "@/components/ui/BlogPostCard";
 
@@ -8,7 +8,6 @@ interface Props {
 
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
-  const t = getTranslations(locale);
   const posts = getAllPosts(locale);
 
   return (
