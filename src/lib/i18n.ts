@@ -10,7 +10,6 @@ export const translations = {
       blog: "Blog",
     },
     home: {
-      introduction: "Welcome to my blog",
       recentPosts: "Recent Posts",
       readMore: "Read More",
       allPosts: "View All Posts",
@@ -38,7 +37,6 @@ export const translations = {
       blog: "ブログ",
     },
     home: {
-      introduction: "ブログへようこそ!!",
       recentPosts: "最新の投稿",
       readMore: "続きを読む",
       allPosts: "全ての投稿を見る",

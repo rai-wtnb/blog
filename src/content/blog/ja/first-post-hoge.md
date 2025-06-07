@@ -6,8 +6,6 @@ tags: ["紹介", "ようこそ", "ブログ"]
 featured: true
 ---
 
-# ブログへようこそ
-
 (This post was created by AI for mock purposes.)
 
 こんにちは、私のブログへようこそ！このプラットフォームを通じて、私の考え、経験、知識を皆さんと共有できることを嬉しく思います。

@@ -20,13 +20,8 @@ export default async function BlogPage({ params }: Props) {
         >
           {t.nav.blog}
         </h1>
-        <p className="text-xl" style={{ color: "var(--foreground)" }}>
-          {locale === "en"
-            ? "All blog posts and articles"
-            : "すべてのブログ投稿と記事"}
-        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8">
         {posts.map((post) => (
           <BlogPostCard key={post.slug} post={post} locale={locale} />
         ))}

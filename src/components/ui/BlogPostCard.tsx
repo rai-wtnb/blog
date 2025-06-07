@@ -14,7 +14,7 @@ export function BlogPostCard({ post, locale }: Props) {
 
   return (
     <article
-      className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      className="rounded-lg shadow-md overflow-hidden hover:shadow-l transition-shadow duration-300"
       style={{ background: "var(--background)" }}
     >
       {post.coverImage && (

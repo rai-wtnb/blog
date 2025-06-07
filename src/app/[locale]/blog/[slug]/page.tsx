@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <Link
         href={`/${locale}/blog`}
         className="inline-flex items-center text-theme-accent-gold hover:text-theme-primary transition-colors mb-8"
